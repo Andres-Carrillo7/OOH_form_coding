@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.main-card {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 700px;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.left-panel, .right-panel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    align-items: center;
+}
+
+.left-panel {
+    color: white;
+}
+
+.right-panel {
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+    backdrop-filter: blur(10px);
+}
+
+.left-content {
+    max-width: 80%;
+}
+
+h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.language-selector {
+    position: absolute;
+    top: 20px;
+    left: 75%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.language-select-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.world-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.form-select {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding-right: 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('../img/arrow.png');
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+}
+
+.form-select:focus {
+    outline: none;
+    box-shadow: none;
+    color: black;
+}
+
+.form-container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-check-label {
+    color: white;
+}
+
+.btn-signup {
+    background-color: #4CAF50;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-weight: 600;
+}
+
+.cta-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: #1a1a1a;
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-icon i:first-child {
+    left: 15px;
+}
+
+.password-toggle {
+    right: 15px;
+    cursor: pointer;
+}
+
+.input-icon input {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+@media (max-width: 768px) {
+    .main-card {
+        height: auto;
+    }
+    
+    .left-panel, .right-panel {
+        padding: 30px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    .subtitle {
+        font-size: 1em;
+    }
+    
+    .form-container {
+        max-width: 100%;
+    }
+
+    .language-selector {
+        position: static;
+        transform: none;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+}
